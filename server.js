@@ -10,7 +10,15 @@ app.use(bodyParser.json());
 
 let id = 1;
 
-let items = [];
+let items = [{
+    name: "Iphone",
+    price: 500,
+    id: id++
+}, {
+    name: "Samsung",
+    price: 200,
+    id: id++
+}];
 
 app.post("/items", (req, res) => {
   const item = { id: id++, ...req.body };
